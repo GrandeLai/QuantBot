@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://quantpilot.local/schemas/ohlcv.json",
+  "title": "Ohlcv",
+  "description": "OHLCV bar data point. One row per (symbol, timestamp).",
+  "type": "object",
+  "required": ["symbol", "timestamp", "open", "high", "low", "close", "volume"],
+  "properties": {
+    "symbol": {
+      "type": "string",
+      "description": "Asset symbol identifier"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 UTC timestamp at the bar start"
+    },
+    "open": {
+      "type": "number",
+      "description": "Opening price"
+    },
+    "high": {
+      "type": "number",
+      "description": "Highest price during the bar"
+    },
+    "low": {
+      "type": "number",
+      "description": "Lowest price during the bar"
+    },
+    "close": {
+      "type": "number",
+      "description": "Closing price"
+    },
+    "volume": {
+      "type": "number",
+      "description": "Volume traded during the bar"
+    },
+    "adjusted": {
+      "type": "boolean",
+      "description": "Whether prices are adjusted for splits/dividends"
+    }
+  },
+  "additionalProperties": false
+}

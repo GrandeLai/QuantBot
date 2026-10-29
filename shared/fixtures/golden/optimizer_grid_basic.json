@@ -1,0 +1,109 @@
+{
+  "case_id": "optimizer_grid_basic",
+  "description": "MA crossover grid search on 25-bar mock series; cross-language equivalence check",
+  "input": {
+    "closes": [
+      100.0,
+      101.0,
+      102.0,
+      103.0,
+      99.0,
+      98.0,
+      100.0,
+      105.0,
+      107.0,
+      110.0,
+      112.0,
+      108.0,
+      106.0,
+      104.0,
+      102.0,
+      100.0,
+      98.0,
+      99.0,
+      101.0,
+      103.0,
+      105.0,
+      107.0,
+      109.0,
+      111.0,
+      113.0
+    ],
+    "initial_cash": 10000.0,
+    "fast_periods": [
+      2,
+      3,
+      5
+    ],
+    "slow_periods": [
+      5,
+      7,
+      10
+    ],
+    "risk_free_rate": 0.0,
+    "periods_per_year": 252.0
+  },
+  "expected": [
+    {
+      "fast_period": 2,
+      "slow_period": 5,
+      "sharpe_ratio": 2.2656526467262177,
+      "total_return": 0.0460169114374723,
+      "max_drawdown": 0.0714285714285714
+    },
+    {
+      "fast_period": 2,
+      "slow_period": 7,
+      "sharpe_ratio": 1.2814718865298038,
+      "total_return": 0.02590120160213628,
+      "max_drawdown": 0.0892857142857143
+    },
+    {
+      "fast_period": 3,
+      "slow_period": 5,
+      "sharpe_ratio": 0.9686388361900783,
+      "total_return": 0.01828783461436524,
+      "max_drawdown": 0.08928571428571427
+    },
+    {
+      "fast_period": 3,
+      "slow_period": 7,
+      "sharpe_ratio": -0.9996266100250829,
+      "total_return": -0.020730671197961056,
+      "max_drawdown": 0.08928571428571437
+    },
+    {
+      "fast_period": 2,
+      "slow_period": 10,
+      "sharpe_ratio": -3.005323828927558,
+      "total_return": -0.0570761014686248,
+      "max_drawdown": 0.10714285714285707
+    },
+    {
+      "fast_period": 3,
+      "slow_period": 10,
+      "sharpe_ratio": -3.005323828927558,
+      "total_return": -0.0570761014686248,
+      "max_drawdown": 0.10714285714285707
+    },
+    {
+      "fast_period": 5,
+      "slow_period": 7,
+      "sharpe_ratio": -3.005323828927558,
+      "total_return": -0.0570761014686248,
+      "max_drawdown": 0.10714285714285707
+    },
+    {
+      "fast_period": 5,
+      "slow_period": 10,
+      "sharpe_ratio": -5.192106737119834,
+      "total_return": -0.0928899082568807,
+      "max_drawdown": 0.125
+    }
+  ],
+  "tolerance": {
+    "abs": 1e-09,
+    "rel": 1e-09,
+    "note": "回测 equity_curve 用 1e-9 容差；Sharpe/metrics 也在 1e-9 内"
+  }
+}

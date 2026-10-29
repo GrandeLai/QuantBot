@@ -1,0 +1,46 @@
+app:
+  name: crypto-trading-assistant-100usdc-paper
+  mode: paper
+  log_level: INFO
+
+trading:
+  live_trading: false
+  dry_run: true
+  require_confirm_before_order: true
+
+risk:
+  max_order_value_usdt: "100"
+  max_daily_loss_usdt: "5"
+  max_position_exposure_usdt: "100"
+  min_net_profit_pct: "0.15"
+  max_slippage_pct: "0.05"
+  min_orderbook_depth_usdt: "1000"
+
+arbitrage:
+  trade_size_usdt: "100"
+  min_net_profit_pct: "0.15"
+
+backtest:
+  initial_capital_usdt: "100"
+  fee_pct: "0.001"
+
+directional:
+  max_position_value_usdt: "100"
+  total_max_exposure_usdt: "100"
+  demo_max_order_value_usdt: "10"
+
+strategy_runtime:
+  default_execution_mode: paper
+  portfolio_max_concurrent_strategies: 1
+  portfolio_min_score: "50"
+  max_position_value_usdt: "100"
+  max_strategy_capital_usdt: "100"
+  demo_max_order_value_usdt: "10"
+  demo_stop_loss_usdt: "1"
+  demo_max_drawdown_usdt: "1"
+  journal_path: logs/100usdc-strategy-events.jsonl
+  runtime_guard_path: logs/100usdc-strategy-runtime-guard.json
+  retrospective_path: runtime/crypto/reports/100usdc-strategy-retrospective.md
+  retrospective_state_path: runtime/crypto/reports/100usdc-strategy-retrospective.state.json
+  evolution_report_path: runtime/crypto/reports/100usdc-strategy-evolution.md
+  evolution_state_path: runtime/crypto/reports/100usdc-strategy-evolution.state.json

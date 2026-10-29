@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://quantpilot.local/schemas/symbol.json",
+  "title": "Symbol",
+  "description": "Trading instrument metadata.",
+  "type": "object",
+  "required": ["symbol", "exchange", "asset_class", "currency"],
+  "properties": {
+    "symbol": {
+      "type": "string",
+      "description": "Asset symbol identifier"
+    },
+    "exchange": {
+      "type": "string",
+      "enum": ["NYSE", "NASDAQ", "ARCA", "HKEX", "SSE", "SZSE", "OKX", "OPRA"],
+      "description": "Listing/trading venue"
+    },
+    "asset_class": {
+      "type": "string",
+      "enum": ["stock", "etf", "option", "index", "crypto_spot", "crypto_perp", "crypto_futures"],
+      "description": "Asset class taxonomy"
+    },
+    "currency": {
+      "type": "string",
+      "description": "Quote currency ISO 4217 code (or asset code for crypto)"
+    },
+    "tick_size": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Minimum price increment"
+    },
+    "lot_size": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Minimum quantity increment"
+    }
+  },
+  "additionalProperties": false
+}

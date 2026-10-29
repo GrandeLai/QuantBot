@@ -1,0 +1,55 @@
+{
+  "case_id": "reports_basic",
+  "description": "Full metrics report for MA crossover on 25-bar mock series; cross-language equivalence check",
+  "input": {
+    "closes": [
+      100.0,
+      101.0,
+      102.0,
+      103.0,
+      99.0,
+      98.0,
+      100.0,
+      105.0,
+      107.0,
+      110.0,
+      112.0,
+      108.0,
+      106.0,
+      104.0,
+      102.0,
+      100.0,
+      98.0,
+      99.0,
+      101.0,
+      103.0,
+      105.0,
+      107.0,
+      109.0,
+      111.0,
+      113.0
+    ],
+    "fast_period": 3,
+    "slow_period": 7,
+    "initial_cash": 10000.0,
+    "risk_free_rate": 0.0,
+    "periods_per_year": 252.0
+  },
+  "expected": {
+    "total_return": -0.020730671197961056,
+    "annual_return": -0.19744907392342037,
+    "max_drawdown": 0.08928571428571437,
+    "max_drawdown_start": 10,
+    "max_drawdown_end": 14,
+    "volatility": 0.20053509390839075,
+    "sharpe_ratio": -0.9996266100250829,
+    "sortino_ratio": -0.5216202003400142,
+    "calmar_ratio": -2.211429627942306,
+    "total_bars": 25
+  },
+  "tolerance": {
+    "abs": 1e-09,
+    "rel": 1e-09,
+    "note": "各指标容差 1e-9；sortino=null 表示无下行收益时的 inf"
+  }
+}

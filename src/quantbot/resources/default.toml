@@ -1,0 +1,56 @@
+[market]
+symbols = ["SPY", "AAPL", "MSFT"]
+benchmark = "SPY"
+timeframe = "1d"
+
+[strategy]
+mode = "ai"
+crypto_rule = "momentum_hold"
+crypto_cooldown_bars = 0
+stock_cooldown_bars = 0
+crypto_rotation_margin = 0.01
+breakout_window = 55
+exit_window = 45
+atr_window = 14
+atr_stop_mult = 2.5
+swing_k = 3
+momentum_window = 126
+pullback_depth_atr = 1.5
+momentum_filter = "absolute"
+
+[llm]
+backend = "openai_compatible"
+base_url = "https://api.openai.com/v1"
+model = ""
+api_key_env = "QUANTBOT_LLM_API_KEY"
+fallback_models = []
+response_format = "json_object"
+timeout_seconds = 45
+
+[codex]
+executable = "codex"
+reasoning_effort = ""
+
+[risk]
+max_weight = 0.20
+max_gross_exposure = 0.60
+max_positions = 5
+risk_per_trade = 0.005
+max_portfolio_heat = 0.03
+min_confidence = 0.70
+cash_buffer = 0.10
+crypto_stop_loss_pct = 0.0
+crypto_take_profit_pct = 0.0
+stock_stop_loss_pct = 0.0
+stock_take_profit_pct = 0.0
+
+[execution]
+initial_cash = 100000.0
+cost_bps = 5.0
+limit_buffer_bps = 50.0
+runtime_dir = "runtime"
+# Shared matching assumptions; these are estimates, not venue calibration.
+max_volume_participation = 0.01
+latency_seconds = 0
+impact_bps_at_participation_cap = 0.0
+entry_ttl_bars = 3

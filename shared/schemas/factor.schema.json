@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://quantpilot.local/schemas/factor.json",
+  "title": "FactorValue",
+  "description": "Single computed factor value at a point in time.",
+  "type": "object",
+  "required": ["factor_id", "symbol", "timestamp", "value"],
+  "properties": {
+    "factor_id": {
+      "type": "string",
+      "description": "Factor identifier, e.g. 'sma_20', 'rsi_14'"
+    },
+    "symbol": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "value": {
+      "type": "number",
+      "description": "Computed factor value (NaN encoded as JSON null)"
+    },
+    "version": {
+      "type": "string",
+      "description": "Factor implementation version, optional"
+    }
+  },
+  "additionalProperties": false
+}

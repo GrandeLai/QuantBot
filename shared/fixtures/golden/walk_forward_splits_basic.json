@@ -1,0 +1,146 @@
+{
+  "case_id": "walk_forward_splits_basic",
+  "description": "Walk-forward window splitting — bit-identical index check across 4 configurations (no tolerance, exact integer match)",
+  "cases": [
+    {
+      "name": "basic_no_embargo",
+      "config": {
+        "total_rows": 30,
+        "train_size": 10,
+        "test_size": 5,
+        "step_size": 5,
+        "embargo_size": 0
+      },
+      "expected_windows": [
+        {
+          "train_start": 0,
+          "train_end": 9,
+          "test_start": 10,
+          "test_end": 14
+        },
+        {
+          "train_start": 5,
+          "train_end": 14,
+          "test_start": 15,
+          "test_end": 19
+        },
+        {
+          "train_start": 10,
+          "train_end": 19,
+          "test_start": 20,
+          "test_end": 24
+        },
+        {
+          "train_start": 15,
+          "train_end": 24,
+          "test_start": 25,
+          "test_end": 29
+        }
+      ],
+      "n_windows": 4
+    },
+    {
+      "name": "with_embargo",
+      "config": {
+        "total_rows": 50,
+        "train_size": 15,
+        "test_size": 8,
+        "step_size": 8,
+        "embargo_size": 2
+      },
+      "expected_windows": [
+        {
+          "train_start": 0,
+          "train_end": 14,
+          "test_start": 17,
+          "test_end": 24
+        },
+        {
+          "train_start": 8,
+          "train_end": 22,
+          "test_start": 25,
+          "test_end": 32
+        },
+        {
+          "train_start": 16,
+          "train_end": 30,
+          "test_start": 33,
+          "test_end": 40
+        },
+        {
+          "train_start": 24,
+          "train_end": 38,
+          "test_start": 41,
+          "test_end": 48
+        }
+      ],
+      "n_windows": 4
+    },
+    {
+      "name": "realistic_100bars",
+      "config": {
+        "total_rows": 100,
+        "train_size": 30,
+        "test_size": 15,
+        "step_size": 10,
+        "embargo_size": 3
+      },
+      "expected_windows": [
+        {
+          "train_start": 0,
+          "train_end": 29,
+          "test_start": 33,
+          "test_end": 47
+        },
+        {
+          "train_start": 10,
+          "train_end": 39,
+          "test_start": 43,
+          "test_end": 57
+        },
+        {
+          "train_start": 20,
+          "train_end": 49,
+          "test_start": 53,
+          "test_end": 67
+        },
+        {
+          "train_start": 30,
+          "train_end": 59,
+          "test_start": 63,
+          "test_end": 77
+        },
+        {
+          "train_start": 40,
+          "train_end": 69,
+          "test_start": 73,
+          "test_end": 87
+        },
+        {
+          "train_start": 50,
+          "train_end": 79,
+          "test_start": 83,
+          "test_end": 97
+        }
+      ],
+      "n_windows": 6
+    },
+    {
+      "name": "insufficient_data",
+      "config": {
+        "total_rows": 20,
+        "train_size": 15,
+        "test_size": 10,
+        "step_size": 5,
+        "embargo_size": 0
+      },
+      "expected_windows": [],
+      "n_windows": 0
+    }
+  ],
+  "tolerance": {
+    "abs": 0,
+    "rel": 0,
+    "note": "整数索引 bit-identical，无容差"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://quantpilot.local/schemas/signal.json",
+  "title": "Signal",
+  "description": "Strategy-generated trading signal.",
+  "type": "object",
+  "required": ["signal_id", "symbol", "timestamp", "action"],
+  "properties": {
+    "signal_id": {
+      "type": "string",
+      "description": "Unique signal identifier (UUID or deterministic hash)"
+    },
+    "symbol": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "action": {
+      "type": "string",
+      "enum": ["long", "short", "flat", "hold"],
+      "description": "Direction the strategy proposes"
+    },
+    "strength": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Confidence/sizing weight in [0, 1]"
+    },
+    "source": {
+      "type": "string",
+      "description": "Strategy id or model id that produced this signal"
+    },
+    "reason": {
+      "type": "string",
+      "description": "Human-readable explanation, optional"
+    }
+  },
+  "additionalProperties": false
+}

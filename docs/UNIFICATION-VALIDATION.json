@@ -1,0 +1,172 @@
+{
+  "version": "0.3.0",
+  "completed_date": "2026-10-07",
+  "target": "/Users/bytedance/code/QuantBot",
+  "sources": {
+    "QuantPilot": "23c24222eb03b8e51ca44d88a01c51fd59e292ac",
+    "CoinBot": "e2a4793e66f1a471471df1619e62602105ef6b09"
+  },
+  "structure": {
+    "python_packages": 1,
+    "primary_commands": 1,
+    "frontends": 1,
+    "rust_cores": 1,
+    "business_python_modules": 550
+  },
+  "validation": {
+    "python_passed": 3197,
+    "subtests_passed": 471,
+    "python_seconds": 228.44,
+    "integration_passed": 106,
+    "rust_passed": 62,
+    "frontend_tests_passed": 32,
+    "frontend_build": "passed",
+    "rust_release_build": "passed",
+    "scoped_ruff": "passed",
+    "pip_check": "passed"
+  },
+  "original_source_preservation": {
+    "source_records": 203,
+    "unchanged": 203,
+    "differences": []
+  },
+  "http_smoke": {
+    "core_health": {
+      "status": 200,
+      "payload": {
+        "status": "ok",
+        "service": "quant-assistant",
+        "version": "0.3.0",
+        "started_at": "2026-10-06T16:42:17.226174+00:00"
+      }
+    },
+    "core_indicators": {
+      "status": 200,
+      "payload": {
+        "indicator": "sma",
+        "period": 3,
+        "values": [
+          null,
+          null,
+          101.0,
+          102.0,
+          103.0
+        ]
+      }
+    },
+    "unified_proxy": {
+      "status": 200,
+      "payload": {
+        "indicator": "sma",
+        "period": 3,
+        "values": [
+          null,
+          null,
+          101.0,
+          102.0,
+          103.0
+        ]
+      }
+    },
+    "onnx_fixture": {
+      "status": 200,
+      "payload": {
+        "model_id": "test_linear",
+        "n_features": 2,
+        "predictions": [
+          1.2000000476837158
+        ]
+      }
+    }
+  },
+  "installed_stock_demo": {
+    "run_type": "demo_simulation",
+    "provider_calls": 34,
+    "real_model_calls": 0,
+    "initial_equity": 100000.0,
+    "final_equity": 104547.97645000002,
+    "return_fraction": 0.04547976450000024,
+    "max_drawdown_fraction": -0.003637103499999794,
+    "fills": 26,
+    "decision_days": 34,
+    "errors": [],
+    "positions": {
+      "AAPL": 126,
+      "MSFT": 106,
+      "SPY": 156
+    },
+    "evidence_boundary": "历史模型回放可能受训练记忆影响；演示/回放不代表前瞻收益或实盘验证",
+    "report": "/Users/bytedance/Documents/Codex/2026-10-05/du-wi/work/quantbot-installed-stock-demo/report.json"
+  },
+  "installed_crypto_demo": {
+    "market": "crypto_spot",
+    "mode": "paper",
+    "status": "ok",
+    "as_of": "2026-05-11T01:00:00+00:00",
+    "snapshot_id": "fd53c1fb5f1cde03d325c6c3c6bb5ab300183300edc219336ed23264f222c107",
+    "data_source": "mock_fixture",
+    "model_called": false,
+    "execution_basis": "offline_close_with_cost",
+    "pnl_basis": "simulated_mark_to_market",
+    "plan": {
+      "provider": "demo_rules",
+      "model": "offline_fixture",
+      "usage": {},
+      "allocations": [
+        {
+          "symbol": "BTC/USDT",
+          "target_weight": 0.2,
+          "confidence": 0.95,
+          "rationale": "离线演示规则：正动量，非大模型推理"
+        },
+        {
+          "symbol": "ETH/USDT",
+          "target_weight": 0.0,
+          "confidence": 0.95,
+          "rationale": "离线演示规则：正动量，非大模型推理"
+        }
+      ],
+      "orders": [
+        {
+          "symbol": "BTC/USDT",
+          "side": "buy",
+          "quantity": "0.0039",
+          "price": "50645.064",
+          "stop": "49987.34109142857",
+          "quantity_step": "0.0001",
+          "client_order_id": "qc-9b643e7a0bf57a33cc5f9621e060cd1e"
+        }
+      ],
+      "adjustments": []
+    },
+    "fills": [
+      {
+        "symbol": "BTC/USDT",
+        "side": "buy",
+        "quantity": "0.0039",
+        "price": "50670.3865320",
+        "stop": "49987.34109142857",
+        "quantity_step": "0.0001",
+        "client_order_id": "qc-9b643e7a0bf57a33cc5f9621e060cd1e",
+        "reason": "allocation"
+      }
+    ],
+    "account": {
+      "cash": 802.3854925252,
+      "equity": 999.9012421252,
+      "positions": {
+        "BTC/USDT": "0.0039"
+      },
+      "current_weights": {
+        "BTC/USDT": 0.19753525776225467
+      }
+    }
+  },
+  "evidence_boundary": {
+    "real_llm_inference": false,
+    "real_alpaca_paper": false,
+    "real_okx_demo": false,
+    "live_trading": false,
+    "github_push_or_archive": false
+  }
+}

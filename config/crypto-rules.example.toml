@@ -1,0 +1,15 @@
+# 明确的离线研究规则；通过 --provider crypto_rules 选择，不调用模型。
+[strategy]
+crypto_rule = "trend_fast" # momentum_hold / trend_fast / breakout / pullback
+
+[risk]
+max_weight = 0.20
+max_gross_exposure = 0.60
+cash_buffer = 0.10
+risk_per_trade = 0.005
+max_portfolio_heat = 0.03
+
+[execution]
+initial_cash = 1000.0
+cost_bps = 15.0
+limit_buffer_bps = 50.0

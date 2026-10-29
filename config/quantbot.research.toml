@@ -1,0 +1,89 @@
+[data]
+root = "data"
+daily_feed = "sip"
+minute_feed = "sip"
+schema_version = 1
+require_complete_coverage = true
+
+[normal]
+benchmark = "SPY"
+universe_mode = "point_in_time"
+execution_price = "next_open"
+cost_bps_per_side = 5.0
+lookback_days = 252
+top_n = 20
+residual_estimation_months = 36
+residual_skip_months = 1
+covariance_shrinkage = 0.50
+no_trade_band = 0.0025
+turnover_penalty = 0.50
+exit_rank_buffer = 5
+max_adv_participation = 0.01
+momentum_rebound_multiplier = 0.50
+# Frozen H1 safety defaults. The capital-efficiency H2 settings
+# (true/two_sided/20) are retained only by the historical audit runner: H2 is
+# completed_rejected and must not be selected through the deployment example.
+redistribute_constrained_capital = false
+volatility_targeting = "cap_only"
+min_funded_names = 0
+
+[daytrade]
+entry_start = "09:45"
+entry_end = "10:30"
+cumulative_vwap = true
+side = "long"
+vwap_hysteresis_bps = 5.0
+stop_basis = "atr"
+atr_stop_multiple = 0.75
+opening_range_stop_multiple = 0.75
+min_opening_range_atr = 0.25
+max_opening_range_atr = 1.50
+min_relative_volume = 1.50
+min_directional_gap = 0.0
+max_directional_gap = 0.05
+min_premarket_volume = 0
+min_directional_spy_return = 0.0
+min_directional_qqq_return = 0.0
+min_directional_sector_strength = 0.0
+max_short_gap_abs = 0.05
+max_portfolio_heat_fraction = 0.02
+correlation_penalty = 0.50
+cost_bps_per_side = 5.0
+max_volume_participation = 0.10
+live_submission_enabled = false
+# Enforce risk.max_daytrade_drawdown by stopping new entries once the daytrade
+# sleeve is down by that fraction from its peak. Off by default so the frozen
+# H3/H9 results stay reproducible; the limit was previously carried into
+# DayTradeConfig and read by nothing.
+enforce_drawdown_halt = false
+
+[portfolio]
+initial_cash = 100000
+normal_fraction = 0.90
+daytrade_fraction = 0.10
+
+[risk]
+max_single_stock_weight = 0.05
+max_sector_weight = 0.25
+max_portfolio_vol_annual = 0.15
+max_normal_drawdown = 0.15
+max_daytrade_drawdown = 0.05
+max_market_beta_exposure = 1.0
+
+[execution]
+primary_broker = "Alpaca"
+backup_broker = "IBKR"
+base_url = "https://paper-api.alpaca.markets"
+slippage_bps_per_side = 0.0
+
+[validation]
+normal_min_net_excess_annual = 0.05
+normal_min_sharpe = 1.2
+# Backtest acceptance ceiling for realized drawdown. Distinct from
+# risk.max_normal_drawdown, which is the operational review/halt trigger for a
+# running book. The ceiling preserves the original formal 15% requirement and
+# is not relaxed based on the configured volatility target.
+normal_max_drawdown = 0.15
+daytrade_min_oos_months = 24
+daytrade_min_oos_trades = 300
+min_paper_sessions = 60

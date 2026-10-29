@@ -1,0 +1,38 @@
+{
+  "model_id": "test_linear",
+  "trained_at": "2026-04-28T00:00:00Z",
+  "features": [
+    {
+      "name": "feature_0",
+      "dtype": "float32"
+    },
+    {
+      "name": "feature_1",
+      "dtype": "float32"
+    }
+  ],
+  "target": "output",
+  "framework": "onnx_manual",
+  "training_metrics": {
+    "note": "手工构造测试模型"
+  },
+  "input_shape": [
+    1,
+    2
+  ],
+  "output_shape": [
+    1,
+    1
+  ],
+  "test_case": {
+    "input": [
+      1.0,
+      2.0
+    ],
+    "expected_output": [
+      1.2
+    ],
+    "tolerance_abs": 1e-06,
+    "note": "0.5*1.0 + 0.3*2.0 + 0.1 = 1.2"
+  }
+}

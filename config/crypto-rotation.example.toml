@@ -1,0 +1,19 @@
+# 只供统一 backtest/runtime 的离线候选研究；不自动启用交易。
+[strategy]
+crypto_rule = "strength_rotation"
+crypto_cooldown_bars = 3
+crypto_rotation_margin = 0.01
+
+[risk]
+max_weight = 0.20
+max_gross_exposure = 0.60
+cash_buffer = 0.10
+risk_per_trade = 0.005
+max_portfolio_heat = 0.03
+crypto_stop_loss_pct = 0.03
+crypto_take_profit_pct = 0.06
+
+[execution]
+initial_cash = 1000.0
+cost_bps = 15.0
+limit_buffer_bps = 50.0

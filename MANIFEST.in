@@ -1,0 +1,12 @@
+include README.md Dockerfile requirements-validated.txt .env.example
+recursive-include config *.toml *.yaml
+recursive-include docs *.md *.json *.txt *.py
+recursive-include tests *.py
+global-exclude __pycache__ *.py[cod]
+include Cargo.toml Cargo.lock AGENTS.md
+recursive-include quant-core *.toml *.rs *.md *.yaml
+recursive-include shared *.json *.onnx *.md
+recursive-include frontend *.json *.html *.ts *.tsx *.css *.mjs
+prune frontend/node_modules
+prune frontend/dist
+recursive-include src/quantbot/web/static *

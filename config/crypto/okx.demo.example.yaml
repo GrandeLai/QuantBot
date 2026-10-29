@@ -1,0 +1,293 @@
+app:
+  name: crypto-trading-assistant
+  mode: sandbox
+  log_level: INFO
+  env_file: ../.env.okx.demo
+
+trading:
+  live_trading: false
+  dry_run: false
+  require_confirm_before_order: false
+
+exchanges:
+  mock:
+    enabled: false
+    sandbox: true
+    adapter: mock
+  mock_alt:
+    enabled: false
+    sandbox: true
+    adapter: mock
+  okx:
+    enabled: true
+    sandbox: true
+    adapter: okx
+    okx_demo: true
+    api_key_env: QUANTBOT_CRYPTO_OKX_API_KEY
+    api_secret_env: QUANTBOT_CRYPTO_OKX_API_SECRET
+    passphrase_env: QUANTBOT_CRYPTO_OKX_PASSPHRASE
+
+agent_trading:
+  enabled: true
+  allow_demo_orders: true
+  allow_live_orders: false
+  strategy_allowlist:
+    - cross-exchange
+    - triangular
+    - triangular-multi-route
+    - funding-carry-hedged
+    - spot-perp-carry
+    - futures-perp-basis
+    - trend-breakout
+    - mean-reversion-spot
+    - volatility-squeeze-breakout
+    - momentum-rotation
+    - hedged-maker
+  allowed_exchanges:
+    - okx
+  max_autonomous_order_value_usdt: "100"
+  max_autonomous_orders_per_day: 5
+  require_audit_log: true
+  audit_log_path: logs/okx-demo-agent-audit.jsonl
+  operator_id_env: QUANTBOT_CRYPTO_AGENT_OPERATOR_ID
+  policy_id: okx-demo-disabled
+  kill_switch_env: QUANTBOT_CRYPTO_AGENT_LIVE_KILL_SWITCH
+
+risk:
+  max_order_value_usdt: "100"
+  max_daily_loss_usdt: "10"
+  max_position_exposure_usdt: "100"
+  min_net_profit_pct: "0.15"
+  max_slippage_pct: "0.05"
+  min_orderbook_depth_usdt: "1000"
+  max_orders_per_minute: 2
+  symbol_blacklist: []
+  exchange_blacklist: []
+
+arbitrage:
+  trade_size_usdt: "50"
+  funding_min_annualized_pct: "20"
+  funding_max_basis_hedge_cost_pct: "0.30"
+  triangular_routes:
+    - [USDT, BTC, ETH, USDT]
+    - [USDT, BTC, SOL, USDT]
+  min_route_depth_usdt: "1000"
+  basis_holding_hours: "24"
+  spot_perp_min_basis_pct: "0.05"
+  futures_basis_min_basis_pct: "0.05"
+  futures_basis_min_days_to_expiry: 3
+
+directional:
+  enabled: true
+  exchange: okx
+  symbols:
+    - BTC/USDT
+    - ETH/USDT
+    - SOL/USDT
+    - XRP/USDT
+    - DOGE/USDT
+    - ADA/USDT
+  bar: 15m
+  candles_limit: 300
+  max_position_value_usdt: "250"
+  total_max_exposure_usdt: "750"
+  single_trade_risk_equity_pct: "0.20"
+  daily_loss_pct: "0.50"
+  min_profit_factor: "1.10"
+  max_backtest_drawdown_pct: "5"
+  min_backtest_net_profit_usdt: "0"
+  demo_enabled_strategies:
+    - trend-breakout
+    - mean-reversion-spot
+    - volatility-squeeze-breakout
+    - momentum-rotation
+  demo_max_order_value_usdt: "20"
+  position_state_path: logs/okx-demo-directional-positions.json
+  fee_pct: "0.001"
+  slippage_pct: "0.0002"
+
+universe:
+  enabled: true
+  symbols:
+    - BTC/USDT
+    - ETH/USDT
+    - SOL/USDT
+    - XRP/USDT
+    - DOGE/USDT
+    - ADA/USDT
+  bar: 15m
+  candles_limit: 120
+  min_24h_volume_usdt: "100000"
+  min_depth_usdt: "1000"
+  max_spread_pct: "0.10"
+  trend_return_threshold_pct: "1.00"
+  range_volatility_max_pct: "1.25"
+
+exit_optimization:
+  enabled: true
+  take_profit_candidates_pct:
+    - "1.00"
+    - "2.00"
+    - "3.00"
+  stop_loss_candidates_pct:
+    - "0.50"
+    - "1.00"
+    - "1.50"
+  trailing_stop_candidates_pct:
+    - "0"
+    - "0.50"
+    - "1.00"
+  time_limit_candidates_bars:
+    - 8
+    - 16
+    - 32
+  max_candidates: 5
+
+range_grid:
+  enabled: true
+  exchange: okx
+  symbols:
+    - BTC/USDT
+    - ETH/USDT
+  grid_levels: 6
+  lookback_candles: 48
+  total_quote_usdt: "100"
+  min_grid_spacing_pct: "0.80"
+  max_range_width_pct: "12"
+  fee_pct: "0.001"
+  slippage_pct: "0.0002"
+
+smart_dca:
+  enabled: true
+  exchange: mock
+  symbols:
+    - BTC/USDT
+    - ETH/USDT
+    - SOL/USDT
+  base_order_usdt: "25"
+  max_cycle_quote_usdt: "100"
+  drawdown_lookback_candles: 48
+  min_drawdown_pct: "2"
+  drawdown_tiers_pct:
+    - "2"
+    - "5"
+    - "10"
+  tier_multipliers:
+    - "1"
+    - "1.5"
+    - "2"
+  target_weights_pct:
+    BTC/USDT: "50"
+    ETH/USDT: "30"
+    SOL/USDT: "20"
+  rebalance_band_pct: "5"
+  underweight_boost_multiplier: "1.25"
+  fee_pct: "0.001"
+  slippage_pct: "0.0002"
+  min_depth_usdt: "1000"
+
+hedged_maker:
+  enabled: true
+  maker_exchange: mock
+  hedge_exchange: mock_alt
+  paper_state_path: logs/hedged-maker-paper-state.json
+  demo_state_path: logs/hedged-maker-demo-state.json
+  symbols:
+    - BTC/USDT
+    - ETH/USDT
+  quote_notional_usdt: "100"
+  quote_spread_pct: "0.20"
+  min_edge_pct: "0.15"
+  maker_fee_pct: "0.0008"
+  taker_fee_pct: "0.001"
+  hedge_slippage_pct: "0.0002"
+  min_hedge_depth_usdt: "1000"
+  paper_queue_ahead_pct: "50"
+  paper_min_fill_pct: "25"
+  paper_stale_quote_seconds: 0
+  paper_cancel_latency_seconds: 0
+  paper_adverse_selection_buffer_pct: "0.05"
+  paper_adverse_hedge_slippage_multiplier: "2"
+
+dex_lp:
+  enabled: false
+  gateway_enabled: false
+  gateway_url: null
+  network: none
+  wallet_address_env: QUANTBOT_CRYPTO_DEX_WALLET_ADDRESS
+  wallet_policy_ack: false
+  gas_model_enabled: false
+  mev_protection_enabled: false
+  testnet_validation_required: true
+  testnet_validation_evidence_path: runtime/crypto/reports/dex-clmm-testnet-evidence.md
+
+strategy_runtime:
+  default_execution_mode: paper
+  enabled_strategies:
+    - cross-exchange
+    - triangular-multi-route
+    - funding-carry-hedged
+    - spot-perp-carry
+    - futures-perp-basis
+    - trend-breakout
+    - mean-reversion-spot
+    - volatility-squeeze-breakout
+    - momentum-rotation
+    - orderbook-imbalance-scalp
+    - range-grid
+    - hedged-maker
+  portfolio_max_concurrent_strategies: 3
+  portfolio_min_score: "50"
+  max_position_value_usdt: "100"
+  max_strategy_capital_usdt: "250"
+  max_open_orders_per_strategy: 2
+  order_ttl_seconds: 30
+  reprice_threshold_pct: "0.05"
+  demo_max_order_value_usdt: "20"
+  demo_order_size_multiplier: "2"
+  demo_strategy_size_overrides: {}
+  demo_order_wait_seconds: 3
+  demo_order_poll_interval_seconds: "0.5"
+  demo_limit_price_buffer_pct: "0.003"
+  demo_require_profitable_preflight: true
+  demo_min_preflight_net_pnl_usdt: "0"
+  demo_preflight_adaptive_buffer_enabled: true
+  demo_preflight_adaptive_buffer_min_samples: 3
+  demo_preflight_adaptive_buffer_quantile_pct: "80"
+  demo_preflight_adaptive_buffer_lookback: 50
+  demo_preflight_adaptive_buffer_max_usdt: "0.10"
+  demo_stop_loss_usdt: "1"
+  demo_max_drawdown_usdt: "1"
+  demo_pnl_reconciliation_tolerance_usdt: "0.10"
+  demo_residual_inventory_tolerance_usdt: "0.10"
+  runtime_guard_enabled: true
+  runtime_guard_path: logs/okx-demo-strategy-runtime-guard.json
+  max_consecutive_execution_failures: 3
+  max_consecutive_losses: 3
+  max_consecutive_market_data_failures: 3
+  max_consecutive_rate_limit_failures: 2
+  failure_cooldown_seconds: 300
+  journal_path: logs/okx-demo-strategy-events.jsonl
+  review_min_samples: 5
+  min_review_win_rate_pct: "40"
+  learning_enabled: true
+  evolution_enabled: true
+  evolution_state_path: runtime/crypto/reports/45-strategy-evolution.state.json
+  evolution_report_path: runtime/crypto/reports/45-strategy-evolution.md
+  evolution_min_net_profit_usdt: "0"
+  evolution_archive_score_penalty: "100"
+  retrospective_enabled: true
+  retrospective_path: runtime/crypto/reports/28-strategy-retrospective.md
+  retrospective_state_path: runtime/crypto/reports/28-strategy-retrospective.state.json
+  retrospective_repeat_warning_threshold: 2
+  retrospective_demo_preflight_score_penalty: "30"
+  validation_min_local_executions: 1
+  validation_min_demo_executions: 10
+  validation_min_win_rate_pct: "60"
+  validation_min_net_profit_usdt: "0"
+  validation_max_drawdown_usdt: "1"
+  validation_allow_live_canary: false
+  autopilot_state_path: logs/okx-demo-autopilot-state.json
+  autopilot_default_interval_seconds: 60
+  autopilot_max_consecutive_blocked_cycles: 3
+  autopilot_stop_on_live_signal: true

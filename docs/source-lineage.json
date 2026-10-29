@@ -1,0 +1,1151 @@
+{
+  "merged_into": "QuantBot",
+  "date": "2026-10-05",
+  "source_files": [
+    {
+      "project": "PABot",
+      "source": "pabot/__init__.py",
+      "sha256": "7fbfd8dd0a2a786f8f9ae13acf3b76b4e836cea375a82c03aab1f7f53030f6e0"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/backtest/__init__.py",
+      "sha256": "bedd707badb9928eaa96274edf03b6c58593bc1d19d1171ed4e7503c8c58c17e"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/backtest/engine.py",
+      "sha256": "5a75175a7c54fc48e8f6bdced3cc5d53b59a739965a5e514066f1b1179d51b55"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/backtest/metrics.py",
+      "sha256": "2a6d0e6c81cf3e0fb3946a2f79519f890e1873a67b7ccbc8f29246dba9586a05"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/backtest/stats.py",
+      "sha256": "13acc2ec9917c7e66fbe58c1376b99c46f634e3fe77757f6f52cfbdf9d159341"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/backtest/walkforward.py",
+      "sha256": "db54492d93904ef7cd7a3bcf8378026247455e1571b6daad57fd918ec881b130"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/broker/__init__.py",
+      "sha256": "ee8811e0c5915e8237f344d9c043bcdf4947171439709361f0f41ca98eb191ae"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/broker/alpaca_broker.py",
+      "sha256": "8e06d9701abf0c15567d879403ee1b62d29ad6243cda200473f0b1540b11ccd7"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/broker/base.py",
+      "sha256": "67e8fe12756322d8b4541e77301926c13bd8668bcf5850f9347cbed76b3c3f57"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/broker/sim_broker.py",
+      "sha256": "5be931c46020b1df7cda88a54512e4673b74419538ac93e25e68de2fd63965b4"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/config.py",
+      "sha256": "b401acad62c6b1f7757751427b927fe717e42f39627264da44a2fa5d9d371643"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/data/__init__.py",
+      "sha256": "b10459260e2b862a4c03472a8dc8da42006258b0fa08ac2326899acfb9627a1c"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/data/aliases.py",
+      "sha256": "27e3ffc34e1946359c38385b2261a3bc0e9fbf535b4a5605a57d13d76c5f22ec"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/data/downloader.py",
+      "sha256": "94bd62fa2fe4884016962beeea9117f590461e30f4c005704bcfea96470e83b5"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/data/earnings.py",
+      "sha256": "d36a52db7dc096dc4d2192bd19594723aa24a12312ad808422c6c2e4811bf4f1"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/data/sectors.py",
+      "sha256": "bbfb21b589f272fc1de9393ab34b8735b42919d3024bd22e1de01210b6c5ec9f"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/data/session.py",
+      "sha256": "97020c6a9c0d06232c88863fcc3eb37cd146476e904cd973cd3553407e769150"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/data/snapshot.py",
+      "sha256": "6e3b42aafd0277ca1b8202ad598257ffcc81cbb550c6752400a846e74af05c58"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/data/sp500_pit.py",
+      "sha256": "410ad6e124e9096bb3b9a9e2ba46cef9560fe8112721f8e068d5019e66c218d8"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/data/universe.py",
+      "sha256": "44c1ba83679c812f4b8de7469746dec17fd529a3c7372df1ad57c4b1560869b6"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/domain/__init__.py",
+      "sha256": "11c7c5c2e4ad87fd8abd050a84426323786ff3f76bf61dd85de46f874518be1d"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/domain/decision.py",
+      "sha256": "397965d08d7059a1d403941aadf335fe00240239d6654437ee33268db20c9df5"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/experiment/__init__.py",
+      "sha256": "6e057d34f5685e0e5fad92ab20c9fa51e3a4fe7c0f3ddf2ac3edc9d24f3f6e94"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/experiment/runner.py",
+      "sha256": "cc802addbc49623a0421ba67849f4bd596c2750363ac7de3462fa79cd07faad0"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/governance/__init__.py",
+      "sha256": "cdd68ca33e0fffaab8882f0b196e4960462f9c6803b4b3552dde47e34efb015a"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/governance/bundle.py",
+      "sha256": "f577490d1d61f78734aa16ecc9238493fa763d3c09ad97e62e718483eb0f9288"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/governance/contracts.py",
+      "sha256": "b9fdfbd91c9c95ae8a35f37bbf33862222c667c91aa91a0de2596d476d962edb"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/governance/policy.py",
+      "sha256": "1247c0fd39257147b145d7c386989690bf33312abe0273221147459f5db9da9a"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/governance/provenance.py",
+      "sha256": "2c8456ef1fc5dfc3337d8377f55be169c2b3343d3b18d62afaaa78d937fb8a55"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/governance/release.py",
+      "sha256": "a0f4bddf87f792e8ae501086e6e60f239032a754dc93c4a733a73127ae230d33"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/live/__init__.py",
+      "sha256": "63a447efb74eec1234fad7bfb0f82da3e94db35f5d6a0c5628e222ff86cf5806"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/live/closing.py",
+      "sha256": "95a18149d8a44c56348cb92623cbca01d274a28215bf4f43ff13a5ca639ede16"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/live/evidence.py",
+      "sha256": "4508336f63a04d31307f7bb57122a1d9d367a40dfee800c40d8e9b909cac8be7"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/live/notify.py",
+      "sha256": "788f9c5218d359caa9f47a92822f338ade8eb0c8f70c58357816f200e1a3d7bc"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/live/paths.py",
+      "sha256": "2cbddb9e0fd63182eb14fdf7763ede70ad913b32bd46b4ee8351cd43a1279a09"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/live/reconcile.py",
+      "sha256": "9d6011e09635c9bc2b754563e5df6e3bb5055b523fcfb462d9ab86168a490a1c"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/live/recovery.py",
+      "sha256": "c59fbca09a85a457b2bf238cf62b21534f2958ac5c1a432644d2965ea5307dd9"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/live/report.py",
+      "sha256": "7b980a605bb7e629b4864e0758c1203b583b8149b4c42fd1758782bf0c19032f"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/live/runner.py",
+      "sha256": "26e9aabaaf86e7d4f9984cb43cc1e28bda35fa9b4a37b094f1861ba9612ecbcc"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/priceaction/__init__.py",
+      "sha256": "3cfbf337fb2f4c8c4cf7d1f0de943d8dd0a3f6c68f4796e04623b0e060fdf14a"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/priceaction/features.py",
+      "sha256": "f3bc20c3452e6b4b63cb502b5bbe00b08dabb3e300d9c4af9a48de8ff9ecc4c1"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/priceaction/patterns.py",
+      "sha256": "ce9ac0c269b602376b37743e99c976a65648c1bc476808880c1745153041107e"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/priceaction/swings.py",
+      "sha256": "bbe960fd822042b95789024fa0ffc037204bbce24fb6f8084c4496894a1a508d"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/review/__init__.py",
+      "sha256": "c0088f1081f6f086bc02346b8dc405fa089564ceee1d8c6b78887270f1d89104"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/review/journal.py",
+      "sha256": "0dba394b1097d019a8928b8137d82623bec9f6bc94e6af6561557ab86f9ad64a"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/review/paper.py",
+      "sha256": "74413763f5794febef889ee4d5ad340b0f90a3788ebf15c17a59d595c616f554"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/review/report.py",
+      "sha256": "780b80d2459d8371894931c7ed6d4e900e5b5c52feeaf878b06ec108d28aadea"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/risk/__init__.py",
+      "sha256": "432d6bf5fff08722aa67efe8cc3a24a6763052d1067b82b1700116f8bb65d297"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/risk/manager.py",
+      "sha256": "e56288273d2d9a87f7c72e841e0fe1eb029200b24a874be6603b7544a1104cd9"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/strategy/__init__.py",
+      "sha256": "b89dbb38d69c60a5e833f0eceea2591419aad19c95a7e8f7722fb60f672114a3"
+    },
+    {
+      "project": "PABot",
+      "source": "pabot/strategy/trend_breakout.py",
+      "sha256": "44813e61e5609923039b7bbd0171f5fb91275c7d7809874b623b4ed293e94dd5"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/__init__.py",
+      "sha256": "1c92abc39ddce09ba389e7aa8dc9e8805360b892ffba4ddab58c77e52e9d8a7e"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/acceptance_policy.py",
+      "sha256": "cd2421d4f8c15dd645f08ce7627f9f79ad621b14638052fb5c5e33b784a0b307"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/acceptance_validation.py",
+      "sha256": "2c981810b282824ff68705bd176e9275e385652d4dd3422b24a131cdcd00d544"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/analytics.py",
+      "sha256": "32f21c0cc5ee139078b779965449d5e80c2be933778ce4d6107480d740d80f06"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/audit.py",
+      "sha256": "e8c258bf2fdaf97970c96016428abc477fb7fa402153eef42c91eabfe9ae4a56"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/backtest.py",
+      "sha256": "44c10aabe4cf580cc94d251dd5ed91e9daae8cca7b5cb71b85bd684a46b2a1f0"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/cli.py",
+      "sha256": "85f08fc01e5debb2279998dbbbf44ff58b223e73c63f17302d8e40141ea513dd"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/cli_commands/__init__.py",
+      "sha256": "0b38bb62554dd93016294b9e69ec4fe8d70c8627cbe902b221103ee81f0bed18"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/cli_commands/acceptance.py",
+      "sha256": "0ab84483603e886580ad7054ee4ee155069052bd4bf5d63bdd027b28c200e66a"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/cli_commands/context.py",
+      "sha256": "6a4ed7e031f468297b6371d7136843bf412c5ff8319b60a314fb63718d782192"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/cli_commands/daytrade.py",
+      "sha256": "045616b0dcc2c839fe145a7a310f4063b3c7d54077039537684e2f72ac3f49f0"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/cli_commands/daytrade_support.py",
+      "sha256": "dcb36cb317b66b32ec529bca5f490ca10e8fb28a1071e07b0b5eb4b2e44b5bf8"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/cli_commands/general.py",
+      "sha256": "a8abef9cf423b28e1d57ec48c4d73068962a008020096db389cd49832c24888a"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/cli_commands/live.py",
+      "sha256": "eb7e4c9b0a22780c56c41cb5698285ab740589bde1b95ddd2560221e38174ac9"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/cli_commands/moomoo.py",
+      "sha256": "fba0e82435de192396959b95c9f11bafe591f1dec1b699950eb12385cc1dfc70"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/cli_commands/moomoo_paper.py",
+      "sha256": "b30419d22aabe69a1e3a973961d41224c1a261c2c1bba2196f6dfe5f1f0c6f30"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/cli_commands/normal.py",
+      "sha256": "dfb93822a0c2f78e57b49225bceed51180019bb899054438363d461433433663"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/cli_commands/paper.py",
+      "sha256": "c44db4afe1720e9db1b439113bd0ac2c5b846770af2fd9726087d9ddd31288a3"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/cli_commands/readiness.py",
+      "sha256": "51105d03fc8e9da2649d0f3483e3cb38f128a25d3f6c15bc903798d2d37e7819"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/cli_commands/registry.py",
+      "sha256": "ecaf7d02d44bf48e672f1548450cad46b826c85e7e8db09f7fc16e9fb6ba0423"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/cli_commands/reporting.py",
+      "sha256": "b71f728d20955f9c8e4db82e64dc434e9564f33046f7448e0afe0a28b28831b9"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/cli_commands/support.py",
+      "sha256": "6307ef5f75f5f1447844f811cce6a5df358fc293a7278cc2c84d0df028fd6e94"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/config.py",
+      "sha256": "ced7a007f7fa2e043d3445aad595d0950f4e91a51294e57687be9b16cc3c04c7"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/config_loader.py",
+      "sha256": "5f9b1caa00991f55a8cb5b668503dab012408078f87ed33041e7aa1d5fc35e8f"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/costs.py",
+      "sha256": "999963d7bf2cf997857adb31620db5ff4b065d4839c5a9ea974513b5e3fc0932"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/dashboard.py",
+      "sha256": "c509fcbd46ae3e80f1bd78a4ef0055c8d432470e50804c2cc8a800734cf46e73"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/dashboard_rendering.py",
+      "sha256": "355e246c3c7bdfb0b0a9f52873199a4fef87af7ca77c616c0539442101217542"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/data/__init__.py",
+      "sha256": "2468f41aa2555eb405a5e4eaf3187bd6f934536bbbc4711baa7fa87f365cbf79"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/data/alignment.py",
+      "sha256": "96e8e32baaaddf80774a666f220c05b870b099ebcf26e6e81a95c37871fecb13"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/data/cleaning.py",
+      "sha256": "ba5e6bbd701c0a8fc97fa9636674df3dfad18baa587d4adcc05e49284e1b6e42"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/data/coverage.py",
+      "sha256": "337365001beb1ff7cdf996f32dc31b3748407e3c96d570670d65aec2fb6ab144"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/data/duckdb_store.py",
+      "sha256": "e6d13a0924aa96499d78fe2008a21e0cbf9a0ec9b9f652e9c93b3eef48a5ee9c"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/data/failover.py",
+      "sha256": "7b704a5b8cab3b5bb61fd301da1e41324b4b1558983b6378e228b3310957f9c7"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/data/pit_bundle.py",
+      "sha256": "4c3e2631062df466584f740e4ebf801f2a44d8e266d44317ad9c86e87b86b253"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/data/pit_calendar.py",
+      "sha256": "da8dcfae1a590778571f52872f769a5cb107d2197ad0ff70aa4e01c4c4bf4a47"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/data/pit_domain.py",
+      "sha256": "c70f5ba3fa150a61a0fa8261b47ff2e667d7336d677f329c02c6898b10f64053"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/data/pit_evidence.py",
+      "sha256": "23ab24184183b7592253576aa5cbce430dcca99337e7e0df917eda10fc29c164"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/data/pit_price.py",
+      "sha256": "75c81b6712d4bad34f3490d167b007bbaf36c5b6529288f32be570e1017d0ad6"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/data/pit_returns.py",
+      "sha256": "9bb57ef7f59d7dfd054f947eb9242373dca2f78c43e751b9bc0d8a980ea9080f"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/data/point_in_time.py",
+      "sha256": "ea35dd572f8d553ada72a7ab6452ed200a52dbd75f542274b5bf204e89eba0bd"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/data/sources.py",
+      "sha256": "a472aff8b98fd658abf3494889d566c39705faeb8eb1781b0d93fcf9a3abe570"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/data/storage.py",
+      "sha256": "ec3a24348ac8a3f02d54e06b64bcbabfd36bd6dbb5e03f4ca49f76db5f4c0c4e"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/daytrade.py",
+      "sha256": "8e01c98371df9f68de6cd9773449b800ca7db2487afecc16eb1d3a4e88e2d89c"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/daytrade_strategy/__init__.py",
+      "sha256": "bb768a7935f82f9a5b63544c9034fd9397e004bfb5f0da55a32662e3ea6ad18d"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/daytrade_strategy/config.py",
+      "sha256": "65aff07730f45b3f463937c08ccd2206be9c9b314b25a856117a6f05875a2536"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/daytrade_strategy/domain.py",
+      "sha256": "9aa0232834dd6c19cf2744c849aeeb172c30a82f06e304ff156b73de40b2f078"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/daytrade_strategy/experiments.py",
+      "sha256": "73facd8718eb404edd5dadf9df65d892086b9f3eb5106d1c691f545245370936"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/daytrade_strategy/features.py",
+      "sha256": "b43121eb7552b694da8f31497301534d404af65feac60682a7b2e86e60b5fb1f"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/daytrade_strategy/filters.py",
+      "sha256": "0a2e48248e5d486b0610d606f1177d19afd7c11061f8c47832eb570bcf0a7755"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/daytrade_strategy/risk.py",
+      "sha256": "0f82a986b9f4cbff8c1c3aca94a171d386f36fb2f14f43e072890421e6962e36"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/daytrade_strategy/universe.py",
+      "sha256": "401492387f2e824f3cdce1aa24b7ac3e4ca8e319246be44cd8f881723c52120f"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/daytrade_strategy/vwap.py",
+      "sha256": "c20daa108db6e7c360bde3c307b7fb529aa3df6682a8a08eb98f3e3c75d89383"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/daytrade_validation_artifact.py",
+      "sha256": "ea3fb7ab1b902732a385cdda9ee0ad4bbee256113d549ed9551e09d87faa2fea"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/evidence.py",
+      "sha256": "02afcdab33295097835fb7081e6a217e73883042d88e2279ebf23b34f3854f68"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/evidence_auth.py",
+      "sha256": "f449b8806a41acc095bb10bc79082681fc7c9e8d52619955c3dbc36042e34626"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/execution.py",
+      "sha256": "5db2f7af453a03f8598860540a783069b322002cd89c499b8ba7eeaf3799a8fa"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/experiment_dispositions.py",
+      "sha256": "10f0e9cf4f9c533aaadae03b2e6cb1c509bfd815d785135dabb5a7975cb9921b"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/experiment_execution.py",
+      "sha256": "b6472087ee6f4f6e1d17fa75896797db55101b377159cced303b23c52929ad6c"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/experiment_registry.py",
+      "sha256": "8c8dff2ebe7c676bf8a126e26699ff77a18162a899218b424c7215e35a58a444"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/experiment_reporting.py",
+      "sha256": "abe67c59b022a3dca9d8be0b8d7f5943cc1adb1ac0f9e6fad30f0a7a0a009a7d"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/exposure.py",
+      "sha256": "e67c9b0941e1ebdea07cc0f105c321aa57b10e9abdc192821ce95e03aaa08e85"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/factors/__init__.py",
+      "sha256": "17a507ceb3a7f235a1c6fd8b8fd4ecdd49617468c366e3201736524271851715"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/factors/alpha158.py",
+      "sha256": "25fbcb2e19e9440bd926cbeae355a757715a4809f91eccdbc367dce0c38c51bc"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/factors/candidate_pool.py",
+      "sha256": "30b562b81cf6b0f1b280003a10f565b3b598c36fe76882799d24cda816253fcc"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/factors/custom.py",
+      "sha256": "deb51c471f999f8e3a40004b07e30a5a869859cbbc80db417734baead8cdc044"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/factors/evaluation.py",
+      "sha256": "7e0017f7f6c114d8cbea127cf026c1564a14d221c4daf663e1c207ea4859d581"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/factors/kronos.py",
+      "sha256": "c90bd82d7eaf77eb98b697485de7416fbb814a6e54e0382f6ce181938b9428ef"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/factors/lifecycle.py",
+      "sha256": "d42a0c7f8d91f99ca542da316166c68aa39a8cc598bb591e3664bbae7d3b190b"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/factors/low_entropy.py",
+      "sha256": "3b1edfc2a235d386d4e7c88fea895acd74e04cef9e542629a781cc0ddda88d47"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/factors/normalization.py",
+      "sha256": "865a51167d908a813057855c6a7b0c613a0d958629f790bbd36ed1c430f05595"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/factors/pool.py",
+      "sha256": "0cb36ac07893ea83fd2b030a6b88f0d5f4097a9cb4cb5b171ee2bf0803d4d53c"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/formal_artifact.py",
+      "sha256": "3ed355dd0b47f214170eba72fbc1bae672ae74f2ef9280f6ee4cb8ca2cdbfcd5"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/formal_evidence.py",
+      "sha256": "785646868ecf61b9415f43ddba6e197aeeb19cbda0172ccb45a885689c797e9c"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/historical_replay.py",
+      "sha256": "0cdf5cbff015e87398a731d134383c9d4a487898c50ce95a1ef181d339ef7831"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/historical_trials.py",
+      "sha256": "5210299273add63bf14e000fd9b0c7e19aba2528e6227fed5aaf1c474819b4dd"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/integrations/__init__.py",
+      "sha256": "aee5598c9d1a2b6e699bef973ce9ae63499d904d3fc5c9b666efb108bbb18d6d"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/integrations/alpaca.py",
+      "sha256": "c423709191fe06bd4c296046877093ae21f17df9a00b9fb5f8e9edda72cd2977"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/integrations/alpaca_news.py",
+      "sha256": "1c0ccda58d42ef11d9b7a472dda24badc28cef1a5d6462019bc8a3fd61c58fe3"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/integrations/cboe.py",
+      "sha256": "fe54e76c1f228f4259c98c17b8189de3c47749efa822b35c6c19f5697ea2246f"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/integrations/chronos.py",
+      "sha256": "1b91dff2205486b9778399e195a59fb0c063c8d52fd19a3c2c10b922a27ec2e8"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/integrations/finra.py",
+      "sha256": "31e61547b4a68916f2a6b5d402620cb8eb4a330c165c04446789bedc0ed130c1"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/integrations/fred.py",
+      "sha256": "a80c18f6f28088bcfd00b8956237f2a803537de41b745804063cb031bf890e40"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/integrations/gdelt.py",
+      "sha256": "0d8e6babc4c4ab178e127c7560c4c30f663afa07788c6e97614c3528c5580848"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/integrations/http.py",
+      "sha256": "53a86427bf2fff63ba934bd982f91695b3b63b411b41a226019947c32b6f147e"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/integrations/moomoo.py",
+      "sha256": "58ac726592226cfce22f4664f1d810ba371995d7f6f9645ce33f538680a18799"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/integrations/nasdaq.py",
+      "sha256": "c6df43a9557aababa3b2d2fcd8bd74491f257c036f96c1e8392d7e75aec0c858"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/integrations/polygon.py",
+      "sha256": "f8450e8b4c8f66f95d1affbbc6416a4695ae5057513f39164d075e7b3f165d81"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/integrations/pytrends.py",
+      "sha256": "957243ce1f9b69cc505d6214bdce0529e100ef26a3bdea1fb4a411ace7ba4a2b"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/integrations/qlib.py",
+      "sha256": "e86b383b84ce42ecbab87281dade4dba0eb945dddf18f4740fa66504b22400bc"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/integrations/quandl.py",
+      "sha256": "f59175aa1141a17d9c59deb438132f32d9cb6be8bb5498c3ff8292be91b6b763"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/integrations/rdagent_runtime.py",
+      "sha256": "fa1eec02f2d3015df852b4ec6bd451a48824e97efec74db95d10daa88ac523a5"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/integrations/scheduler.py",
+      "sha256": "4951b64cfcc86e188fc776aeeb22e74c9d920d3e16d24b4ff8cca26a99cc2ddf"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/integrations/sec.py",
+      "sha256": "090b5bbc4a3595e0eb67fcfe211a58260e997851756a23e8e5225790462d7b32"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/integrations/sec13f.py",
+      "sha256": "3c4b5d1f69097609abdd619c8ce9149ea3b383ee2c5931c8435af58f9621b6d9"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/integrations/sec_form4.py",
+      "sha256": "aa667b2ba0044ea525dda1f5690fdb1cba2e85119d94603a8b8ca8e31e7239ee"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/integrations/yfinance.py",
+      "sha256": "a915259c4d892885234ea42ca8e35205ec9371c9dbe05a9931c259ae38dbbaab"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/live.py",
+      "sha256": "9e557a58526beb7f69ff6c1c769eb0cf0a9d1424400c8a1991278b9307c4e171"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/live_smoke.py",
+      "sha256": "093c35c99017f8704063105a5e11a047360a617715b5de544f65e98bf7438bbe"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/llm_filter.py",
+      "sha256": "49633a87f07093405f6c717fef411e269c9269eb0c9a8646c45d10cef917aad0"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/monitoring.py",
+      "sha256": "03c8eee79376319d12a96ca398ccf9872a3a67ecf2d861c91e5987f901531f6f"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/moomoo_paper.py",
+      "sha256": "96e8b6637c06bc498e138bb4e751b5a60001d03cddaf8b95b58eb604d04c1481"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/normal/__init__.py",
+      "sha256": "f6cfe66af319b44ac067b4e0f7fb1eeb764ee965601c0d9a324ee3417a53cab9"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/normal/adapter_trust.py",
+      "sha256": "7be70b4a83242ce3f8ec66310c57ecf07c76135419bc951210b7af1d89763607"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/normal/backtest.py",
+      "sha256": "8f106166002762145aa0efe9d9c263edd7058bb12078409281c6434e50cfc784"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/normal/domain.py",
+      "sha256": "370ca676f89d31e25ddb0d2faff1d1c151590a3e8cd13be54e4b551e0ae6165d"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/normal/execution_artifact.py",
+      "sha256": "abbe4957a32742dd36bb2e105734b3e1c034e733e7dd8c2e23a76f88aefc714a"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/normal/experiment_runner.py",
+      "sha256": "9d00e5228d6529f3cc4d8760bfe2d64a91eaaa6c6c6a71bbd01f6efedfcf2fb6"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/normal/experiments.py",
+      "sha256": "08c9a952478b5f4b66857b5d9981d58f40d52695cd1861d0117e8c8ce199aac4"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/normal/historical_trials.py",
+      "sha256": "7db506dd407327787a50ec0abe25442d4f0c8ad9c63fe613e724f9d4eaae5f22"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/normal/portfolio.py",
+      "sha256": "1f310447c354444793eea090862eea16791e3fa262ad9c1df4c4b3088a099c44"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/normal/protocol.py",
+      "sha256": "cee285ff9a36e66328c73858770ea70dfb8e237863b6aa869871840a3ed4ac96"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/normal/provider.py",
+      "sha256": "fa05eb01262ba1f2bebd30bd3426c5a4d6e2f8cb22bf701f3773c5d2c2cdb03e"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/normal/research_adapter.py",
+      "sha256": "5f971a4ffaa5934ac72a217350a4efdf7541ba00f80ed130bbe9a4a50dc1fee2"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/normal/risk_model.py",
+      "sha256": "9652d708c85aee3584a98d98b8877f3935492ace7da5b84401b86a0d7048cfd9"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/normal/strategy.py",
+      "sha256": "c363fe2732571676c1ce55d9908862ecb02779faae43dde3bd29d81a01649150"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/observability.py",
+      "sha256": "29780c87d678d6e7f7e7fbf6a9f8525c4205e99b44960ef1f05ac174516492b1"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/oos_backtest.py",
+      "sha256": "60f560647016e6290973ca7f315d52cf8f9c9b6fdee06aa4601104b7bf91737a"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/optimization.py",
+      "sha256": "3612d4abae378a65d68ddc071a2253c9c023e13feda890ebcdec49d27a791f92"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/orchestration.py",
+      "sha256": "87027d4df5c47c11605af6baacd48dc6f6601b6752d330c795b77d70f3a339b5"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/overfit.py",
+      "sha256": "271d499acf0764181d1e6fdc14a3bb5d8be6257f09b806f8f149db5ec5b35b39"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/paper.py",
+      "sha256": "afee860f3bd4c2fad2e46b0d0e3ef54dc714f8c5ac4c797de0cceb8204bcfece"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/portfolio.py",
+      "sha256": "8b39728c269c4b44babf9df2c08db173480b72a416c424d2c91bb42299cf11e9"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/preflight.py",
+      "sha256": "7cc487a115b1a86ae585ca09266f7fd2621b72bac65d3b4006fd13661e596f92"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/promotion.py",
+      "sha256": "3c5fd24e10c169c2a10a331bc09822351a1ab92e493aec034bd729d132c5c604"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/quality.py",
+      "sha256": "80aaaff20e9953dccb2dc5204953a378b86fab2dd06e058e3563f7b36d4bd9ee"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/rdagent.py",
+      "sha256": "761396c96e34cf70aa860620446a46d200c32c74494541607fb458caa21d4c2f"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/readiness.py",
+      "sha256": "dcd722289dd47052210771294867cde5af875e074366b177aaba7d24bafed075"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/regime.py",
+      "sha256": "ebeb205d0e850c85df9c843bcd06ebe25caac09d6285fac08968c0e1b9cf01be"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/regime_features.py",
+      "sha256": "e0257351cffb4616452990d4454494ceae8ccd5964ccc32a701f04716dad8c60"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/regime_model.py",
+      "sha256": "051658e0eb264440bd89f636e8a449a353c23870c4970f6a2c7ec1ad5f0a3c8e"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/research.py",
+      "sha256": "ff1e099fa0fc2f137f10d8360e10503303229a7e7d6f0db86f72365ef5a2ab5b"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/risk.py",
+      "sha256": "53551d3d125cc19eb13820aedf5faf252a67ad17ad70842013a2b48f4b28b001"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/risk_controls.py",
+      "sha256": "ea587fb0ab7ade8bc57ea0a7bb75f26a2efadab79bfca053c4daaec5b3da4258"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/runtime.py",
+      "sha256": "025a607c7e56337f3a1de874b5c45f0ca8d9ee613b7bd447603acee714de4fd8"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/runtime_factory.py",
+      "sha256": "4d9416351739ef7536c0c2a3aeaf42af65902560d27353c1f40fd4dfe071ca5c"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/runtime_smoke.py",
+      "sha256": "5b080ed1f3f887beae9a40b28f60ab8d1099def688f96630c1b2fb48b9035fa8"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/scheduler.py",
+      "sha256": "dce18b19052401b4ab8db6676effc45b232bf89ff3f52711b8d8e4bcd7214e93"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/statistical_validation.py",
+      "sha256": "4b95cb4c4935ec050773f7a868b445957a255e4db453337659cd70f4c8a87455"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/strategy_admission.py",
+      "sha256": "e818e0e76504cca81bf12753bf50a0aa7a814d4d7cb426f97d91a51f36add386"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/tax.py",
+      "sha256": "05a832bf8b860b9a1504678580fac8660a3179c1b58a1f775f65494c47077e46"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/trading/__init__.py",
+      "sha256": "5d85d690b3313dc139f441936bb433ae8441e4da454fb205deb913c2afe2cabb"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/trading/adapters.py",
+      "sha256": "3aa6d505ba4b05a243ceb8aea48312a745e561831f72f50d56023c4aea1a92f9"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/trading/domain.py",
+      "sha256": "a0585fe2627a0ed10d8a3399270131cfc806cd966e0ba114110499652e617325"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/trading/engine.py",
+      "sha256": "e90ab9ce8e80b5ce5da50f79829ef37ef3c83e04b8fbed43c04a512059776277"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/trading/ledger.py",
+      "sha256": "d1f4498bfc16251d0021cd718b8d95dddac7f557c9275d20635c0d562505ea08"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/trading/ports.py",
+      "sha256": "9685d2a449b497098fe097d1a4a242e5b6ea0777bb4b1c434ab2fa3d2d19633c"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/trading/risk.py",
+      "sha256": "2bd36601725f999224d4438d6d518a983d5febcd17583c26cfd4e6433d4328da"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/trading_agent.py",
+      "sha256": "e15cc526ac5b88770959e25aaa8380ca1102beed4f233d3c3e699b45e5fe8815"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/universe.py",
+      "sha256": "ee1939fd20f63f63bafe315fbbab9c0aee9da8d97191d35a581c16469ec0c85f"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/validation_protocol.py",
+      "sha256": "015537b902d3c792622c2a09c9d53194990050f3bb5945ab298d6745c887d927"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/versioning.py",
+      "sha256": "652b321f55476783bc1415d6401a9c8485431e40890bd638c948fe52cbfc7560"
+    },
+    {
+      "project": "StockBot",
+      "source": "src/stockbot/watchlist.py",
+      "sha256": "20de2ae2741f7d692b58ab2d42eb466f3d669b2b5bee65720ec03416f43f4866"
+    }
+  ],
+  "namespace": {
+    "pabot": "quantbot.price_action",
+    "stockbot": "quantbot"
+  },
+  "migration_changed_files": [
+    "src/quantbot/experiment_registry.py",
+    "src/quantbot/config_loader.py",
+    "src/quantbot/scheduler.py",
+    "src/quantbot/acceptance_policy.py",
+    "src/quantbot/cli_commands/registry.py",
+    "src/quantbot/cli_commands/__init__.py",
+    "src/quantbot/price_action/config.py",
+    "src/quantbot/price_action/cli.py",
+    "src/quantbot/price_action/broker/sim_broker.py",
+    "src/quantbot/price_action/broker/base.py",
+    "src/quantbot/price_action/live/paths.py",
+    "src/quantbot/price_action/governance/provenance.py",
+    "tests/test_stockbot_trading_engine.py",
+    "tests/test_stockbot_historical_replay.py",
+    "tests/test_stockbot_normal_pit_backtest.py",
+    "tests/test_stockbot_integrations.py",
+    "tests/test_stockbot_normal_provider.py",
+    "tests/test_stockbot_config_pipeline.py",
+    "tests/test_stockbot_factor_library.py",
+    "tests/test_stockbot_experiment_reporting.py",
+    "tests/test_stockbot_paper_promotion.py",
+    "tests/test_stockbot_normal_research_adapter.py",
+    "tests/test_stockbot_low_entropy_factors.py",
+    "tests/test_stockbot_formal_evidence.py",
+    "tests/test_stockbot_runtime_factory.py",
+    "tests/test_stockbot_drawdown_threshold_separation.py",
+    "tests/test_stockbot_evidence_loader.py",
+    "tests/test_stockbot_core.py",
+    "tests/test_stockbot_paper_cli.py",
+    "tests/test_stockbot_statistical_validation.py",
+    "tests/test_stockbot_versioning.py",
+    "tests/test_stockbot_broker_account_risk.py",
+    "tests/test_stockbot_cli_architecture.py",
+    "tests/test_stockbot_normal_input_provenance.py",
+    "tests/test_stockbot_normal_portfolio.py",
+    "tests/test_stockbot_acceptance_cycle.py",
+    "tests/test_stockbot_runtime_smoke.py",
+    "tests/test_stockbot_cli.py",
+    "tests/test_stockbot_workflows.py",
+    "tests/test_stockbot_cscv_partition.py",
+    "tests/test_stockbot_normal_capital_efficiency.py",
+    "tests/test_stockbot_paper_evidence_rate_limit.py",
+    "tests/test_stockbot_pit_total_returns.py",
+    "tests/test_stockbot_resilience_config.py",
+    "tests/test_stockbot_cli_normal_experiment.py",
+    "tests/test_stockbot_cli_runtime_config.py",
+    "tests/test_stockbot_normal_protocol.py",
+    "tests/test_stockbot_experiment_registry.py",
+    "tests/test_stockbot_data_clients.py",
+    "tests/test_stockbot_normal_h1_runner.py",
+    "tests/test_stockbot_pit_bundle.py",
+    "tests/test_stockbot_moomoo_paper.py",
+    "tests/test_stockbot_daytrade.py",
+    "tests/test_stockbot_moomoo_cli.py",
+    "tests/test_stockbot_runtime_config.py",
+    "tests/test_stockbot_runtime_smoke_cli.py",
+    "tests/test_stockbot_normal_drawdown_policy.py",
+    "tests/test_stockbot_cli_daytrade_h9.py",
+    "tests/test_stockbot_delivery_artifacts.py",
+    "tests/test_stockbot_daytrade_hypotheses.py",
+    "tests/test_stockbot_quality_observability.py",
+    "tests/test_stockbot_daytrade_drawdown_halt.py",
+    "tests/test_stockbot_normal_historical_trials.py",
+    "tests/test_stockbot_guards_analytics.py",
+    "tests/test_stockbot_moomoo_integration.py",
+    "tests/test_stockbot_collect_evidence.py",
+    "tests/test_stockbot_normal_h2_capital_efficiency.py",
+    "tests/test_stockbot_trading_domain.py",
+    "tests/test_stockbot_daytrade_broker_capacity.py",
+    "tests/test_stockbot_orchestration.py",
+    "tests/test_stockbot_validation_protocol.py",
+    "tests/test_stockbot_backtest_execution.py",
+    "tests/test_stockbot_validation_thresholds.py",
+    "tests/test_stockbot_acceptance_numeric_validation.py",
+    "tests/test_stockbot_live_soak.py",
+    "tests/test_stockbot_point_in_time_data.py",
+    "tests/test_stockbot_unread_config_keys.py",
+    "tests/test_stockbot_daytrade_validation_artifact.py",
+    "tests/test_stockbot_cli_experiment_reporting.py",
+    "tests/test_stockbot_experiment_execution.py",
+    "tests/test_stockbot_strategy_admission.py",
+    "tests/test_stockbot_completion_audit.py",
+    "tests/test_stockbot_normal_execution_artifact.py",
+    "tests/test_stockbot_strategy_readiness.py",
+    "tests/test_stockbot_moomoo_paper_cli.py",
+    "tests/test_stockbot_runtime_evidence.py",
+    "tests/test_stockbot_exposure_ledger.py",
+    "tests/test_stockbot_trading_ledger.py",
+    "tests/historical_trial_fixtures.py",
+    "tests/test_stockbot_daytrade_h9.py",
+    "tests/test_stockbot_acceptance_policy.py",
+    "tests/price_action/test_runner_journal.py",
+    "tests/price_action/conftest.py",
+    "tests/price_action/test_stats.py",
+    "tests/price_action/test_governance.py",
+    "tests/price_action/test_decision_policy.py",
+    "tests/price_action/test_strategy.py",
+    "tests/price_action/test_engine_golden.py",
+    "tests/price_action/test_experiment.py",
+    "tests/price_action/test_reconcile.py",
+    "tests/price_action/test_broker_contract.py",
+    "tests/price_action/test_patterns.py",
+    "tests/price_action/test_journal_recovery.py",
+    "tests/price_action/test_runner_live.py",
+    "tests/price_action/test_runtime_paths.py",
+    "tests/price_action/test_live_report.py",
+    "tests/price_action/test_release_bundle.py",
+    "tests/price_action/test_review_report.py",
+    "tests/price_action/test_engine_equivalence.py",
+    "tests/price_action/test_shorts.py",
+    "tests/price_action/test_config.py",
+    "tests/price_action/test_parity.py",
+    "tests/price_action/test_snapshot.py",
+    "tests/price_action/test_paper_close.py",
+    "tests/price_action/test_review_journal.py",
+    "tests/price_action/test_sim_broker.py",
+    "tests/price_action/test_main_commands.py",
+    "tests/price_action/test_paper_evidence.py",
+    "tests/price_action/test_trade_review.py",
+    "tests/price_action/test_startup_recovery.py",
+    "tests/price_action/test_engine_delisted.py",
+    "tests/price_action/test_no_lookahead.py",
+    "tests/price_action/test_live_data.py"
+  ],
+  "historical_evidence_admitted": false
+}

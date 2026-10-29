@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://quantpilot.local/schemas/backtest_config.json",
+  "title": "BacktestConfig",
+  "description": "Configuration for a backtest run.",
+  "type": "object",
+  "required": ["strategy_id", "universe", "start_date", "end_date", "initial_capital"],
+  "properties": {
+    "strategy_id": {
+      "type": "string",
+      "description": "Strategy identifier (Rhai script name or native trait id)"
+    },
+    "strategy_params": {
+      "type": "object",
+      "description": "Strategy-specific parameter object; schema strategy-defined"
+    },
+    "universe": {
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 1,
+      "description": "List of symbols traded in the backtest"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Inclusive start date (ISO 8601 date)"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Inclusive end date (ISO 8601 date)"
+    },
+    "initial_capital": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Starting cash"
+    },
+    "fee_rate": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Per-trade fee rate (fraction, e.g. 0.001 = 10 bps)"
+    },
+    "slippage_bps": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Assumed slippage in basis points"
+    },
+    "fill_model": {
+      "type": "string",
+      "enum": ["next_open", "next_close", "vwap"],
+      "description": "How the simulator fills orders"
+    },
+    "data_frequency": {
+      "type": "string",
+      "enum": ["1m", "5m", "15m", "30m", "1h", "1d"],
+      "description": "Bar frequency"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,45 @@
+[package]
+name = "quantbot-quant"
+version = "0.3.0"
+edition = "2021"
+description = "QuantBot 量化助手后端（Rust）：自动化研究 + 规则化执行 + ONNX 推理"
+license = "MIT"
+
+[lib]
+name = "quantbot_quant"
+crate-type = ["rlib"]
+
+[[bin]]
+name = "quantbot-quant-server"
+path = "src/main.rs"
+
+[dependencies]
+# HTTP server
+axum = "0.7"
+tokio = { version = "1", features = ["full"] }
+tower = "0.5"
+tower-http = { version = "0.6", features = ["cors", "trace"] }
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Generated schemas (PR 2 codegen)
+chrono = { version = "0.4", features = ["serde"] }
+
+# Errors
+anyhow = "1"
+thiserror = "2"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Strategy DSL
+rhai = { version = "1.21", features = ["sync"] }
+tract-onnx = "0.22.1"
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3

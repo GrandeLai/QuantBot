@@ -1,0 +1,10 @@
+# 使用本机 Codex 的登录；不需要 QUANTBOT_LLM_API_KEY。
+# 将 model 填为本机 Codex 中有权限使用的模型，显式冻结模型选择。
+[llm]
+backend = "codex_cli"
+model = ""
+timeout_seconds = 300
+
+[codex]
+executable = "codex"
+reasoning_effort = ""

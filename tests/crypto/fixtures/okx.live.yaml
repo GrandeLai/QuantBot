@@ -1,0 +1,95 @@
+app:
+  name: crypto-trading-assistant
+  mode: live
+  log_level: INFO
+  env_file: ../.env.okx.live
+
+trading:
+  live_trading: true
+  dry_run: false
+  require_confirm_before_order: false
+
+exchanges:
+  mock:
+    enabled: false
+    sandbox: true
+    adapter: mock
+  mock_alt:
+    enabled: false
+    sandbox: true
+    adapter: mock
+  okx:
+    enabled: true
+    sandbox: false
+    adapter: okx
+    okx_demo: false
+    api_key_env: QUANTBOT_CRYPTO_OKX_API_KEY
+    api_secret_env: QUANTBOT_CRYPTO_OKX_API_SECRET
+    passphrase_env: QUANTBOT_CRYPTO_OKX_PASSPHRASE
+
+agent_trading:
+  enabled: true
+  allow_demo_orders: false
+  allow_live_orders: false
+  strategy_allowlist:
+    - cross-exchange
+    - triangular-multi-route
+  allowed_exchanges:
+    - okx
+  max_autonomous_order_value_usdt: "50"
+  max_autonomous_orders_per_day: 0
+  require_audit_log: true
+  audit_log_path: logs/okx-live-agent-audit.jsonl
+  operator_id_env: QUANTBOT_CRYPTO_AGENT_OPERATOR_ID
+  policy_id: okx-live-requires-final-operator-enable
+  kill_switch_env: QUANTBOT_CRYPTO_AGENT_LIVE_KILL_SWITCH
+
+risk:
+  max_order_value_usdt: "50"
+  max_daily_loss_usdt: "10"
+  max_position_exposure_usdt: "50"
+  min_net_profit_pct: "0.20"
+  max_slippage_pct: "0.03"
+  min_orderbook_depth_usdt: "5000"
+  max_orders_per_minute: 1
+  symbol_blacklist: []
+  exchange_blacklist: []
+
+arbitrage:
+  trade_size_usdt: "25"
+  funding_min_annualized_pct: "20"
+  funding_max_basis_hedge_cost_pct: "0.30"
+  triangular_routes:
+    - [USDT, BTC, ETH, USDT]
+    - [USDT, BTC, SOL, USDT]
+  min_route_depth_usdt: "5000"
+  basis_holding_hours: "24"
+  spot_perp_min_basis_pct: "0.05"
+  futures_basis_min_basis_pct: "0.05"
+  futures_basis_min_days_to_expiry: 3
+
+strategy_runtime:
+  enabled_strategies:
+    - cross-exchange
+    - triangular-multi-route
+    - funding-carry-hedged
+    - spot-perp-carry
+    - futures-perp-basis
+  portfolio_max_concurrent_strategies: 2
+  portfolio_min_score: "70"
+  validation_min_local_executions: 1
+  validation_min_demo_executions: 10
+  validation_min_win_rate_pct: "60"
+  validation_min_net_profit_usdt: "0"
+  validation_max_drawdown_usdt: "1"
+  validation_allow_live_canary: false
+  evolution_enabled: true
+  evolution_state_path: runtime/crypto/reports/45-strategy-evolution.state.json
+  evolution_report_path: runtime/crypto/reports/45-strategy-evolution.md
+  evolution_min_net_profit_usdt: "0"
+  evolution_archive_score_penalty: "100"
+  retrospective_enabled: true
+  retrospective_path: runtime/crypto/reports/28-strategy-retrospective.md
+  retrospective_state_path: runtime/crypto/reports/28-strategy-retrospective.state.json
+  retrospective_repeat_warning_threshold: 2
+  retrospective_demo_preflight_score_penalty: "30"

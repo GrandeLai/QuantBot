@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://quantpilot.local/schemas/backtest_result.json",
+  "title": "BacktestResult",
+  "description": "Outcome of a backtest run.",
+  "type": "object",
+  "required": ["backtest_id", "config_strategy_id", "metrics", "equity_curve"],
+  "properties": {
+    "backtest_id": {
+      "type": "string",
+      "description": "Unique identifier for this backtest run"
+    },
+    "config_strategy_id": {
+      "type": "string",
+      "description": "Strategy id of the BacktestConfig used (independent reference; full config logged separately)"
+    },
+    "ran_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "metrics": {
+      "type": "object",
+      "required": ["total_return", "sharpe_ratio", "max_drawdown", "trade_count"],
+      "properties": {
+        "total_return": {"type": "number", "description": "Cumulative return (fraction)"},
+        "sharpe_ratio": {"type": "number"},
+        "max_drawdown": {"type": "number", "description": "Max drawdown (fraction, positive)"},
+        "trade_count": {"type": "integer", "minimum": 0},
+        "win_rate": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "equity_curve": {
+      "type": "array",
+      "description": "Sampled equity curve points",
+      "items": {
+        "type": "object",
+        "required": ["timestamp", "equity"],
+        "properties": {
+          "timestamp": {"type": "string", "format": "date-time"},
+          "equity": {"type": "number"}
+        }
+      }
+    },
+    "trades": {
+      "type": "array",
+      "description": "Executed trades, optional",
+      "items": {
+        "type": "object",
+        "required": ["entry_timestamp", "exit_timestamp", "symbol", "side", "qty", "entry_price", "exit_price", "pnl"],
+        "properties": {
+          "entry_timestamp": {"type": "string", "format": "date-time"},
+          "exit_timestamp": {"type": "string", "format": "date-time"},
+          "symbol": {"type": "string"},
+          "side": {"type": "string", "enum": ["long", "short"]},
+          "qty": {"type": "number"},
+          "entry_price": {"type": "number"},
+          "exit_price": {"type": "number"},
+          "pnl": {"type": "number"}
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}
